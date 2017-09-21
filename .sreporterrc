@@ -1,0 +1,40 @@
+{
+  "projectName": "Sonar Web Front-End Reporter",
+  "csslint": {
+    "src": "src/**/*.css",
+    "report": "reports/sonar/csslint.json",
+    "rulesFile": "rulefiles/.csslintrc"
+  },
+  "sasslint": {
+    "src": "src/**/*.scss",
+    "report": "reports/sonar/scsslint.json",
+    "rulesFile": "rulefiles/.sass-lint.yml"
+  },
+  "sass-to-scsslint": {
+    "src": "src/**/*.scss",
+    "report": "reports/sonar/scsslint.json",
+    "rulesFile": "rulefiles/.sass-lint.yml"
+  },
+  "htmlhint": {
+    "src": "src/**/*.html",
+    "report": "reports/sonar/htmlhint.json",
+    "rulesFile": "rulefiles/.htmlhintrc"
+  },
+  "eslint": {
+    "src": "src/**/*.js",
+    "report": "reports/sonar/eslint.json",
+    "rulesFile": "rulefiles/.eslintrc",
+    "ignorePath": ".eslintignore"
+  },
+  "eslintangular": {
+    "src": "src/**/*.js",
+    "report": "reports/sonar/eslint-angular.json",
+    "rulesFile": "rulefiles/.eslintrc",
+    "ignorePath": ".eslintignore"
+  },
+  "jshint": {
+    "src": "src/**/*.js",
+    "report": "reports/sonar/jshint.json",
+    "rulesFile": "rulefiles/.jshintrc"
+  }
+}

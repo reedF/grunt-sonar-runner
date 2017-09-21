@@ -15,6 +15,7 @@ module.exports = function (grunt) {
         jshint: {
             all: [
                 'Gruntfile.js',
+                'src/*.js',
                 'tasks/*.js',
                 'test/*.js'
             ],
@@ -25,7 +26,7 @@ module.exports = function (grunt) {
 
         // Before generating any new files, remove any previously-created files.
         clean: {
-            tests: ['tmp']
+            tests: ['tmp','reports']
         },
 
         // Configuration to be run (and then tested).
@@ -38,15 +39,10 @@ module.exports = function (grunt) {
                         host: {
                             url: 'http://localhost:9000'
                         },
-                        jdbc: {
-                            url: 'jdbc:h2:tcp://localhost:9092/sonar',
-                            username: 'sonar',
-                            password: 'sonar'
-                        },
                         projectKey: 'sonar:grunt-sonar-runner:0.1.0',
                         projectName: 'Grunt Sonar Runner',
                         projectVersion: '0.10',
-                        sources: ['test'].join(','),
+                        sources: ['src','test'].join(','),
                         language: 'js',
                         sourceEncoding: 'UTF-8'
                     }
@@ -61,15 +57,10 @@ module.exports = function (grunt) {
                         host: {
                             url: 'http://localhost:9000'
                         },
-                        jdbc: {
-                            url: 'jdbc:mysql://localhost:3306/sonar',
-                            username: 'sonar',
-                            password: 'sonar'
-                        },
                         projectKey: 'sonar:grunt-sonar-runner:0.1.0',
                         projectName: 'Grunt Sonar Runner',
                         projectVersion: '0.10',
-                        sources: ['test'].join(','),
+                        sources: ['src','test'].join(','),
                         exclusions: '**/R.js'
                     }
                 }
@@ -91,14 +82,14 @@ module.exports = function (grunt) {
 
     grunt.loadTasks('tasks');
 
-
+    //grunt.loadNpmTasks('grunt-sonar-runner');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-mocha-test');
 
 
     grunt.registerTask('test', ['clean', 'sonarRunner:dryRun', 'mochaTest']);
-
+    grunt.registerTask('sonar', ['sonarRunner:analysis']);
     grunt.registerTask('default', ['jshint', 'test']);
 
 };

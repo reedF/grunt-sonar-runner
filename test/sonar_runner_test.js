@@ -28,10 +28,10 @@ describe('Sonar Runner', function () {
         should.not.exist(sonarConfig['sonar.language']);
     });
 
-    it('database config is picked from jdbc node', function () {
-        sonarConfig['sonar.jdbc.url'].should.be.equal('jdbc:mysql://localhost:3306/sonar');
-        sonarConfig['sonar.jdbc.username'].should.be.equal('sonar');
-        sonarConfig['sonar.jdbc.password'].should.be.equal('sonar');
-    });
+//    it('database config is picked from jdbc node', function () {
+//        sonarConfig['sonar.jdbc.url'].should.be.equal('jdbc:mysql://localhost:3306/sonar');
+//        sonarConfig['sonar.jdbc.username'].should.be.equal('sonar');
+//        sonarConfig['sonar.jdbc.password'].should.be.equal('sonar');
+//    });
 
 });

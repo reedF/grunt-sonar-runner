@@ -1,39 +1,37 @@
 {
-    "name": "grunt-sonar-runner",
-    "description": "Sonar Analysis Runner from grunt. The major version is kept in sync with sonar runner distribution version.",
-    "version": "2.4.8",
-    "homepage": "https://github.com/skhatri/grunt-sonar-runner",
-    "author": {
-        "name": "Suresh Khatri",
-        "email": "servlet2@msn.com"
-    },
-    "repository": "skhatri/grunt-sonar-runner",
-    "bugs": {
-        "url": "https://github.com/skhatri/grunt-sonar-runner/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/skhatri/grunt-sonar-runner/blob/master/LICENSE-MIT"
-        }
-    ],
-    "engines": {
-        "node": ">= 0.10"
-    },
-    "scripts": {
-        "test": "grunt test"
-    },
-    "devDependencies": {
-        "grunt": "^1.0.1",
-        "grunt-contrib-clean": "^1.0.0",
-        "grunt-contrib-jshint": "^1.0.0",
-        "grunt-mocha-test": "^0.12.4",
-        "should": "^9.0.0"
-    },
-    "peerDependencies": {
-        "grunt": ">=0.4.5"
-    },
-    "keywords": [
-        "gruntplugin", "sonar", "sonar-runner"
-    ]
+  "name": "grunt-sonar-runner",
+  "description": "Sonar Analysis Runner from grunt. The major version is kept in sync with sonar runner distribution version.",
+  "version": "2.4.8",
+  "homepage": "https://github.com/skhatri/grunt-sonar-runner",
+  "author": {},
+  "repository": "skhatri/grunt-sonar-runner",
+  "bugs": {
+    "url": "https://github.com/skhatri/grunt-sonar-runner/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/skhatri/grunt-sonar-runner/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-mocha-test": "^0.13.2",
+    "mocha": "^3.5.3",
+    "sonar-web-frontend-reporters": "^3.3.0"
+  },
+  "peerDependencies": {},
+  "keywords": [
+    "gruntplugin",
+    "sonar",
+    "sonar-runner"
+  ]
 }
